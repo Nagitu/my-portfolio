@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { ThemeToogle } from "./theme-toogle";
 import { NavBar } from "./components/navbar";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";

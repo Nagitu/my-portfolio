@@ -1,6 +1,5 @@
 "use client";
 import { useTheme } from "next-themes";
-import { FaMoon, FaSun } from "react-icons/fa";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
 export function ThemeToogle() {
