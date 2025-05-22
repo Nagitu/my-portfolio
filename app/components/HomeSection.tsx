@@ -6,7 +6,7 @@ export default function HomeSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-orange-100 via-white to-orange-50 dark:bg-gray-900 px-6 scroll-mt-24"
+      className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-6 scroll-mt-24"
     >
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Kiri: Teks */}
@@ -23,7 +23,7 @@ export default function HomeSection() {
         {/* Kanan: Gambar */}
         <div className="flex justify-center md:justify-end">
           <Image
-            src="/next.svg"
+            src="/trans_bg.png"
             alt="Foto Profil"
             width={300}
             height={300}

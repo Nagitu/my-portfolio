@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoMoon, IoSunny } from "react-icons/io5";
 import { HiMenu, HiX } from "react-icons/hi";
+import Image from "next/image";
 
 export function NavBar() {
   const { theme, setTheme } = useTheme();
@@ -23,11 +24,19 @@ export function NavBar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-20 bg-white sm:bg-white/30 sm:backdrop-blur-none  dark:bg-gray-900 shadow-md transition-colors">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-gray-800 dark:text-white">
-          My Portfolio
-        </h1>
+    <nav className="fixed top-0 left-0 w-full z-20 bg-white/30 md:bg-white md:backdrop-blur-none  dark:bg-gray-900 shadow-md transition-colors">
+      <div className="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
+        <Link href="#home">
+          {mounted && (
+            <Image
+              src={theme === "light" ? "/trans_bg.png" : "/white_on_trans.png"}
+              alt="Foto Profil"
+              width={40}
+              height={40}
+              className="cursor-pointer"
+            />
+          )}
+        </Link>
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-4">
@@ -48,6 +57,12 @@ export function NavBar() {
             className="text-gray-700 dark:text-gray-300 hover:bg-orange-100 px-4 py-2 rounded-full"
           >
             Projects
+          </Link>
+          <Link
+            href="#contact"
+            className="text-gray-700 dark:text-gray-300 hover:bg-orange-100 px-4 py-2 rounded-full"
+          >
+            Contact Me
           </Link>
           {mounted && (
             <button
